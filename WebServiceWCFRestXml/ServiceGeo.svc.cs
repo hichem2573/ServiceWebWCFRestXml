@@ -22,6 +22,7 @@ namespace WebServiceWCFRestXml
 
         /// <summary>
         /// Méthode de recupétration de la liste des pays
+        /// Méthode interne pour factoriser le code
         /// </summary>
         /// <returns>La liste de tous les pays </returns>
         public List<string> GetNomsPays()
@@ -35,6 +36,7 @@ namespace WebServiceWCFRestXml
         }
         /// <summary>
         /// Méthode permettant de Récuperé les infos concernant un pays
+        /// Méthode interne pour factoriser le code
         /// </summary>
         /// <param name="nom">Nom du pays </param>
         /// <returns>Un pays </returns>
