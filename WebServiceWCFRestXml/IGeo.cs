@@ -14,12 +14,15 @@ namespace WebServiceWCFRestXml
     {
 
         [OperationContract]
-        [WebGet(UriTemplate = "Pays")]
+        [WebGet(UriTemplate = "Pays", ReponseFormat = WebMessageFormat.Json)]
         List<string> GetNomsPays();
 
         [OperationContract]
-        [WebGet(UriTemplate = "Pays/{nom}")]
+        [WebGet(UriTemplate = "Pays/{nom}", ResponseFormat = WebMessageFormat.Json)]
         Pays GetInfosPays(string nom);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "TousLesPays", ResponseFormat = WebMessageFormat.Json)]
 
         
     }
