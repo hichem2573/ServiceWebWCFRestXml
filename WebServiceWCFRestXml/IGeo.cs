@@ -14,7 +14,7 @@ namespace WebServiceWCFRestXml
     {
 
         [OperationContract]
-        [WebGet(UriTemplate = "Pays", ReponseFormat = WebMessageFormat.Json)]
+        [WebGet(UriTemplate = "Pays", ResponseFormat = = WebMessageFormat.Json)]
         List<string> GetNomsPays();
 
         [OperationContract]
@@ -23,7 +23,7 @@ namespace WebServiceWCFRestXml
 
         [OperationContract]
         [WebGet(UriTemplate = "TousLesPays", ResponseFormat = WebMessageFormat.Json)]
-
+        List<Pays> GetTousLesPays();
         
     }
 

@@ -47,5 +47,13 @@ namespace WebServiceWCFRestXml
             }
             return null;
         }
+        /// <summary>
+        /// Méthode permettant de récupérer tous les pays
+        /// </summary>
+        /// <returns>Liste de tous les pays </returns>
+        public List<Pays> GetTousLesPays()
+        {
+            return listePays;
+        }
     }
 }
