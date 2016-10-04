@@ -18,6 +18,8 @@ namespace WebServiceWCFRestXml
             new Pays {Nom="Italie", Capitale="Rome",NbHabitants=60 },
             new Pays {Nom="Espagne", Capitale="Madrid",NbHabitants=45 }
         };
+
+
         /// <summary>
         /// Méthode de recupétration de la liste des pays
         /// </summary>
@@ -46,6 +48,36 @@ namespace WebServiceWCFRestXml
                 }
             }
             return null;
+        }
+
+        public List<string> GetNomsPaysAsJson()
+        {
+            return GetNomsPays();
+        }
+
+        public Pays GetInfosPaysAsJson(string nom)
+        {
+            return GetInfosPays(nom);
+        }
+
+        public List<Pays> GetTousLesPaysAsJson()
+        {
+            return listePays;
+        }
+
+        public List<string> GetNomsPaysAsXml()
+        {
+            return GetNomsPays();
+        }
+
+        public Pays GetInfosPaysAsXml(string nom)
+        {
+            return GetInfosPays(nom);
+        }
+
+        public List<Pays> GetTousLesPaysAsXml()
+        {
+            return listePays;
         }
     }
 }

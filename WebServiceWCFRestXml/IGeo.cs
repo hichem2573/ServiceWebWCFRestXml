@@ -14,17 +14,31 @@ namespace WebServiceWCFRestXml
     {
 
         [OperationContract]
+        [WebGet(UriTemplate = "Pays?format = json", ResponseFormat = WebMessageFormat.Json)]
+        List<string> GetNomsPaysAsJson();
+
+        [OperationContract]
+        [WebGet(UriTemplate = "Pays/{nom}?format = json", ResponseFormat = WebMessageFormat.Json)]
+        Pays GetInfosPaysAsJson(string nom);
+
+        [OperationContract]
+        [WebGet(UriTemplate = "TousLesPays?format = json", ResponseFormat = WebMessageFormat.Json)]
+        List<Pays> GetTousLesPaysAsJson();
+
+        [OperationContract]
         [WebGet(UriTemplate = "Pays")]
-        List<string> GetNomsPays();
+        List<string> GetNomsPaysAsXml();
 
         [OperationContract]
         [WebGet(UriTemplate = "Pays/{nom}")]
-        Pays GetInfosPays(string nom);
+        Pays GetInfosPaysAsXml(string nom);
 
-        
+        [OperationContract]
+        [WebGet(UriTemplate = "TousLesPays")]
+        List<Pays> GetTousLesPaysAsXml();
+
+
     }
-
-
     // Utilisez un contrat de données comme indiqué dans l'exemple ci-après pour ajouter les types composites aux opérations de service.
     [DataContract]
     public class Pays
