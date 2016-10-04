@@ -14,7 +14,7 @@ namespace ConsoleRESTFull
         {
             WebClient client = new WebClient();
             client.DownloadStringCompleted += new DownloadStringCompletedEventHandler(client_DownloadStringCompleted);
-            client.DownloadStringAsync(new Uri("http://localhost:5000/ServiceGeo/Pays", UriKind.Absolute));
+            client.DownloadStringAsync(new Uri("http://localhost:5000/ServiceGeo.svc/Pays", UriKind.Absolute));
             Console.In.Read();
         }
 
